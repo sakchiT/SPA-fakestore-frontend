@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-tshirt"></i>
+                <span>StyleHub</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#cart" class="nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="app"></main>
+
+    <!-- Templates -->
+    <template id="home-template">
+        <section class="page home-page">
+            <div class="hero">
+                <h1>Welcome to StyleHub</h1>
+                <p>Discover premium fashion</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure transactions</p>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="products-template">
+        <section class="page products-page">
+            <h1>Our Collection</h1>
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="men">Men</button>
+                <button class="filter-btn" data-category="women">Women</button>
+                <button class="filter-btn" data-category="kids">Kids</button>
+            </div>
+            <div class="products-grid"></div>
+        </section>
+    </template>
+
+    <template id="cart-template">
+        <section class="page cart-page">
+            <h1>Your Cart</h1>
+            <div class="cart-container">
+                <div class="cart-items"></div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>$5</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span class="total-price">$5</span>
+                    </div>
+                    <button class="btn checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="product-card-template">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="" alt="Product">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title"></h3>
+                <p class="product-category"></p>
+                <div class="product-price">$<span></span></div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="cart-item-template">
+        <div class="cart-item">
+            <img src="" alt="Product" class="cart-item-image">
+            <div class="cart-item-details">
+                <h3 class="cart-item-title"></h3>
+                <div class="cart-item-price">$<span></span></div>
+            </div>
+            <div class="cart-item-controls">
+                <button class="quantity-btn minus">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn plus">+</button>
+                <button class="remove-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
